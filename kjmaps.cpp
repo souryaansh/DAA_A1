@@ -13,7 +13,7 @@ void dfs(int vertex,map<int,vector<int>> graph){
 }
 void revdfs(int vertex,map<int,vector<int>> graph){
     visited.insert(vertex);
-    // cout<<vertex<<" ";
+    cout<<vertex<<" ";
     ++current;
     // cout<<current;
     for(auto i : graph[vertex]){
@@ -46,15 +46,15 @@ int main(){
     int maxtore=0;
     current=0;
     visited.clear();
+    cout<<"Strongly Connected Components are:\n";
     while(!strong.empty()){
         // cout<<"hello";
         current =0;
         int curr = strong.top();
-        if(visited.find(curr)==visited.end()){revdfs(curr,rev_graph);}
-        // cout<<"\n";
+        if(visited.find(curr)==visited.end()){revdfs(curr,rev_graph);cout<<"\n\n";}
         strong.pop();
         maxtore = max(current,maxtore);
     }
-    cout<<maxtore<<"\n";
+    cout<<"\n\n\nNodes in largest SCC:"<<maxtore<<"\n";
 
 }

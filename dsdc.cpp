@@ -20,7 +20,7 @@ void dfs(int s, bool swit){
         for(auto i : rev_inp[s]){
             if(!p_visit[i] && d_visit[i])dfs(i,swit);
             if(p_visit[i] && d_visit[i] ){if(scc.find(i)==scc.end())
-            // cout<<i<<" ";
+            cout<<i<<" ";
             scc.insert(i);
             main_visit[i]=1;}
         }
@@ -43,6 +43,7 @@ int main(){
     }
         // cout<<"hello";
     // main_visit.assign(n,false);
+    cout<<"Strongly Connected Components are:\n\n";
     int max_nodes =0 ;
     for(auto i : inp){
         scc.clear();
@@ -53,7 +54,7 @@ int main(){
             dfs(i.first,1);
             int count = scc.size();
             max_nodes = max(count,max_nodes);
-            // if(scc.size()>0)cout<<"\n";
+            if(scc.size()>0)cout<<"\n\n";
     }}
-    cout <<"\n"<< max_nodes << endl;
+    cout<<"\n\n\nNodes in largest SCC:"<<max_nodes<<"\n";
 }

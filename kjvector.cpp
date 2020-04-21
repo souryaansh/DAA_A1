@@ -6,7 +6,6 @@ stack<int> strong;
 int current =0;
 void dfs(int vertex,vector<int> graph[]){
     visited[vertex] = true;
-    // cout<<vertex<<" ";
     for(auto i : graph[vertex]){
         if(!visited[i])dfs(i,graph);
     }
@@ -14,7 +13,7 @@ void dfs(int vertex,vector<int> graph[]){
 }
 void revdfs(int vertex,vector<int> graph[]){
     visited[vertex] = true;
-    // cout<<vertex<<" ";
+    cout<<vertex<<" ";
     ++current;
     for(auto i : graph[vertex]){
         if(!visited[i])revdfs(i,graph);
@@ -43,15 +42,14 @@ int main(){
     }
     int maxtore=0;
     current=0;
+    cout<<"Strongly Connected Components are:\n";
     for(int i=0;i<v;i++){visited[i] = false;}
     while(!strong.empty()){
         current =0;
         int curr = strong.top();
-        if(!visited[curr]){revdfs(curr,rev_graph);}
-        // cout<<"\n";
+        if(!visited[curr]){revdfs(curr,rev_graph);cout<<"\n\n";}
         strong.pop();
         maxtore = max(current,maxtore);
     }
-    cout<<maxtore;
-
+    cout<<"\n\n\nNodes in largest SCC:"<<maxtore<<"\n";
 }
