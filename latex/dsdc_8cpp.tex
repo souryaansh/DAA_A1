@@ -1,0 +1,123 @@
+\hypertarget{dsdc_8cpp}{}\doxysection{dsdc.\+cpp File Reference}
+\label{dsdc_8cpp}\index{dsdc.cpp@{dsdc.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dsdc_8cpp_a3d1d46092e0ef49ca534486b513e3f7c}{dfs}} (int s, bool swit)
+\begin{DoxyCompactList}\small\item\em Perform dfs on either graphs\+: inp and rev\+\_\+inp. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{dsdc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, unordered\+\_\+set$<$ int $>$ $>$ \mbox{\hyperlink{dsdc_8cpp_a920b64eeef6c6792765d5603c0b33d1b}{inp}}
+\begin{DoxyCompactList}\small\item\em stores the given graph \end{DoxyCompactList}\item 
+map$<$ int, unordered\+\_\+set$<$ int $>$ $>$ \mbox{\hyperlink{dsdc_8cpp_a054279a046e11549c2401e905fb0f155}{rev\+\_\+inp}}
+\begin{DoxyCompactList}\small\item\em stores the reverse of goven graph i.\+e. for any edge the from vertex will be the to vertext and vice versa \end{DoxyCompactList}\item 
+map$<$ int, bool $>$ \mbox{\hyperlink{dsdc_8cpp_ab43d67114ea6e31bb93b17d3269ad89a}{p\+\_\+visit}}
+\begin{DoxyCompactList}\small\item\em stores if the fiven vertex is visited while performing dfs on inp \end{DoxyCompactList}\item 
+map$<$ int, bool $>$ \mbox{\hyperlink{dsdc_8cpp_a0d2960798e81467a2d5bfaec27974ad3}{d\+\_\+visit}}
+\begin{DoxyCompactList}\small\item\em stores if the fiven vertex is visited while performing dfs on rev\+\_\+inp \end{DoxyCompactList}\item 
+set$<$ int $>$ \mbox{\hyperlink{dsdc_8cpp_a2b8f4bd19a9aca9d2bf6dcc25da7ca46}{main\+\_\+visit}}
+\begin{DoxyCompactList}\small\item\em stores if a given vertext has been considered to preform dfs on \end{DoxyCompactList}\item 
+set$<$ int $>$ \mbox{\hyperlink{dsdc_8cpp_a0e0a22f618a4aae066c1ecc2bdbc1702}{scc}}
+\begin{DoxyCompactList}\small\item\em store the current Strongly Connected Component \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dsdc_8cpp_a3d1d46092e0ef49ca534486b513e3f7c}\label{dsdc_8cpp_a3d1d46092e0ef49ca534486b513e3f7c}} 
+\index{dsdc.cpp@{dsdc.cpp}!dfs@{dfs}}
+\index{dfs@{dfs}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily void dfs (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{bool}]{swit }\end{DoxyParamCaption})}
+
+
+
+Perform dfs on either graphs\+: inp and rev\+\_\+inp. 
+
+perform dfs on inp if bool val is false
+
+perform dfs on rev\+\_\+inp if bool val is true\mbox{\Hypertarget{dsdc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{dsdc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{dsdc.cpp@{dsdc.cpp}!main@{main}}
+\index{main@{main}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+n\+: number of nodes m\+: nuber of edges
+
+Taking edge inputs and modifying the graph accordingly Format of input for a edge\+: v1 v2 v1 is \textquotesingle{}from\textquotesingle{} vertex and v2 is \textquotesingle{}to\textquotesingle{} vertex
+
+stores max num of nodes in a S\+CC
+
+loop to consider each vertex to perform dfs
+
+checking if given vertex is alreadty considered for dfs
+
+dfs on inp
+
+dfs on rev\+\_\+inp
+
+updating max\+\_\+nodes
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{dsdc_8cpp_a0d2960798e81467a2d5bfaec27974ad3}\label{dsdc_8cpp_a0d2960798e81467a2d5bfaec27974ad3}} 
+\index{dsdc.cpp@{dsdc.cpp}!d\_visit@{d\_visit}}
+\index{d\_visit@{d\_visit}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{d\_visit}{d\_visit}}
+{\footnotesize\ttfamily map$<$int,bool$>$ d\+\_\+visit}
+
+
+
+stores if the fiven vertex is visited while performing dfs on rev\+\_\+inp 
+
+\mbox{\Hypertarget{dsdc_8cpp_a920b64eeef6c6792765d5603c0b33d1b}\label{dsdc_8cpp_a920b64eeef6c6792765d5603c0b33d1b}} 
+\index{dsdc.cpp@{dsdc.cpp}!inp@{inp}}
+\index{inp@{inp}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{inp}{inp}}
+{\footnotesize\ttfamily map$<$int,unordered\+\_\+set$<$int$>$ $>$ inp}
+
+
+
+stores the given graph 
+
+\mbox{\Hypertarget{dsdc_8cpp_a2b8f4bd19a9aca9d2bf6dcc25da7ca46}\label{dsdc_8cpp_a2b8f4bd19a9aca9d2bf6dcc25da7ca46}} 
+\index{dsdc.cpp@{dsdc.cpp}!main\_visit@{main\_visit}}
+\index{main\_visit@{main\_visit}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{main\_visit}{main\_visit}}
+{\footnotesize\ttfamily set$<$int$>$ main\+\_\+visit}
+
+
+
+stores if a given vertext has been considered to preform dfs on 
+
+\mbox{\Hypertarget{dsdc_8cpp_ab43d67114ea6e31bb93b17d3269ad89a}\label{dsdc_8cpp_ab43d67114ea6e31bb93b17d3269ad89a}} 
+\index{dsdc.cpp@{dsdc.cpp}!p\_visit@{p\_visit}}
+\index{p\_visit@{p\_visit}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{p\_visit}{p\_visit}}
+{\footnotesize\ttfamily map$<$int,bool$>$ p\+\_\+visit}
+
+
+
+stores if the fiven vertex is visited while performing dfs on inp 
+
+\mbox{\Hypertarget{dsdc_8cpp_a054279a046e11549c2401e905fb0f155}\label{dsdc_8cpp_a054279a046e11549c2401e905fb0f155}} 
+\index{dsdc.cpp@{dsdc.cpp}!rev\_inp@{rev\_inp}}
+\index{rev\_inp@{rev\_inp}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{rev\_inp}{rev\_inp}}
+{\footnotesize\ttfamily map$<$int,unordered\+\_\+set$<$int$>$ $>$ rev\+\_\+inp}
+
+
+
+stores the reverse of goven graph i.\+e. for any edge the from vertex will be the to vertext and vice versa 
+
+\mbox{\Hypertarget{dsdc_8cpp_a0e0a22f618a4aae066c1ecc2bdbc1702}\label{dsdc_8cpp_a0e0a22f618a4aae066c1ecc2bdbc1702}} 
+\index{dsdc.cpp@{dsdc.cpp}!scc@{scc}}
+\index{scc@{scc}!dsdc.cpp@{dsdc.cpp}}
+\doxysubsubsection{\texorpdfstring{scc}{scc}}
+{\footnotesize\ttfamily set$<$int$>$ scc}
+
+
+
+store the current Strongly Connected Component 
+

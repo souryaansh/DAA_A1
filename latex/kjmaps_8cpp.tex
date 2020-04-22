@@ -1,0 +1,81 @@
+\hypertarget{kjmaps_8cpp}{}\doxysection{kjmaps.\+cpp File Reference}
+\label{kjmaps_8cpp}\index{kjmaps.cpp@{kjmaps.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{kjmaps_8cpp_ab03954593ce02c4cc8ca5ee670f66b0d}{dfs}} (int vertex, map$<$ int, vector$<$ int $>$$>$ graph)
+\item 
+void \mbox{\hyperlink{kjmaps_8cpp_a5cccfcdd01574d6f8c921ebe68311b81}{revdfs}} (int vertex, map$<$ int, vector$<$ int $>$$>$ graph)
+\begin{DoxyCompactList}\small\item\em pushes each reachable vertex on the stack\+: Strong \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kjmaps_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+set$<$ int $>$ \mbox{\hyperlink{kjmaps_8cpp_acc11890bf6e3e76fd9fdea78445a6a94}{visited}}
+\item 
+stack$<$ int $>$ \mbox{\hyperlink{kjmaps_8cpp_a31e826bea04c2867b9c6b7ee941adee1}{strong}}
+\item 
+int \mbox{\hyperlink{kjmaps_8cpp_ab04e2d55ea4a544f3575812582af7b51}{current}} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kjmaps_8cpp_ab03954593ce02c4cc8ca5ee670f66b0d}\label{kjmaps_8cpp_ab03954593ce02c4cc8ca5ee670f66b0d}} 
+\index{kjmaps.cpp@{kjmaps.cpp}!dfs@{dfs}}
+\index{dfs@{dfs}!kjmaps.cpp@{kjmaps.cpp}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily void dfs (\begin{DoxyParamCaption}\item[{int}]{vertex,  }\item[{map$<$ int, vector$<$ int $>$$>$}]{graph }\end{DoxyParamCaption})}
+
+Performs Depth first search on the input graph and pushes each reachable vertex on the stack\+: Strong \mbox{\Hypertarget{kjmaps_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{kjmaps_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{kjmaps.cpp@{kjmaps.cpp}!main@{main}}
+\index{main@{main}!kjmaps.cpp@{kjmaps.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+v\+:number of vetices and e\+:number of edges
+
+input graph
+
+reverse of input graph
+
+Taking edge inputs and modifying the graph accordingly Format of input for a edge\+: v1 v2 v1 is \textquotesingle{}from\textquotesingle{} vertex and v2 is \textquotesingle{}to\textquotesingle{} vertex
+
+Performing dfs on each unvisited node
+
+Reversing the input graph to apply Kosa\+Raju
+
+Performing D\+FS on the nodes on the stack and pooping it out Hence identifying the Strongly Connected Components
+
+Printing number of nodes in largest S\+CC\mbox{\Hypertarget{kjmaps_8cpp_a5cccfcdd01574d6f8c921ebe68311b81}\label{kjmaps_8cpp_a5cccfcdd01574d6f8c921ebe68311b81}} 
+\index{kjmaps.cpp@{kjmaps.cpp}!revdfs@{revdfs}}
+\index{revdfs@{revdfs}!kjmaps.cpp@{kjmaps.cpp}}
+\doxysubsubsection{\texorpdfstring{revdfs()}{revdfs()}}
+{\footnotesize\ttfamily void revdfs (\begin{DoxyParamCaption}\item[{int}]{vertex,  }\item[{map$<$ int, vector$<$ int $>$$>$}]{graph }\end{DoxyParamCaption})}
+
+
+
+pushes each reachable vertex on the stack\+: Strong 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{kjmaps_8cpp_ab04e2d55ea4a544f3575812582af7b51}\label{kjmaps_8cpp_ab04e2d55ea4a544f3575812582af7b51}} 
+\index{kjmaps.cpp@{kjmaps.cpp}!current@{current}}
+\index{current@{current}!kjmaps.cpp@{kjmaps.cpp}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily int current =0}
+
+\mbox{\Hypertarget{kjmaps_8cpp_a31e826bea04c2867b9c6b7ee941adee1}\label{kjmaps_8cpp_a31e826bea04c2867b9c6b7ee941adee1}} 
+\index{kjmaps.cpp@{kjmaps.cpp}!strong@{strong}}
+\index{strong@{strong}!kjmaps.cpp@{kjmaps.cpp}}
+\doxysubsubsection{\texorpdfstring{strong}{strong}}
+{\footnotesize\ttfamily stack$<$int$>$ strong}
+
+\mbox{\Hypertarget{kjmaps_8cpp_acc11890bf6e3e76fd9fdea78445a6a94}\label{kjmaps_8cpp_acc11890bf6e3e76fd9fdea78445a6a94}} 
+\index{kjmaps.cpp@{kjmaps.cpp}!visited@{visited}}
+\index{visited@{visited}!kjmaps.cpp@{kjmaps.cpp}}
+\doxysubsubsection{\texorpdfstring{visited}{visited}}
+{\footnotesize\ttfamily set$<$int$>$ visited}
+
