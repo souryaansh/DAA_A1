@@ -1,0 +1,65 @@
+RESULTS and TIMES: divideandconqueralgo
+
+small testcases:
+
+->test case 1
+	5 5
+	1 2
+	2 3
+	3 1
+	1 4
+	4 5
+
+	Result:
+		Strongly Connected Components are:
+		3 2 1 
+
+		4 
+
+		5 
+
+		Nodes in largest SCC:3
+Time:  0.00s user 0.00s system 0% cpu 1.521 total
+
+
+->test case2:
+	6 7
+	1 2
+	2 3
+	3 1
+	1 4
+	4 5
+	5 6
+	6 4
+
+	Result:
+	Strongly Connected Components are:
+	2 1 3 
+
+	6 5 4 
+
+
+
+
+	Nodes in largest SCC:3
+Time:  0.00s user 0.00s system 0% cpu 0.671 total
+
+
+
+Large testcase:
+
+->testcase 1:
+	numnodes: 7115
+	numedges: 103689 
+ 	result:
+		Nodes in largest SCC:1300
+Time:  101.99s user 0.02s system 100% cpu 1:41.99 total
+
+
+->testcase 2:
+	numnodes: 1005
+	numedges: 25571
+
+	result:
+		Nodes in largest SCC:803
+Time:  0.34s user 0.00s system 99% cpu 0.338 total

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Documentation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" type="text/css" href="./code.css">
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<script type="text/javascript" src="highlight.pack.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body data-spy="scroll" data-target=".sidenav" data-offset="60">
+
+<div id="mySidenav" class="sidenav">
+
+<a href="#Analysis">Analysis</a>
+<a href="#Results">Results</a>
+<a href="#References">References</a>
+
+  <div class="pos-bottom doneBy">
+    <h3 class="doneBy">Done By:</h2>
+    <ul>
+    <li>Hitesh Shetty 2017A71541H</li>
+	  <li>Souryaansh Agarwal 2017A7PS1538H</li>
+    <li>Ritwik Sharma 2017A7PS220H</li>
+    </ul>
+  </div>
+</div>
+
+<div id="main">
+    <h1>DAA Assignment 1:</h1>
+    <h1 id="Analysis">Description and Analysis</h1>
+    <pre>
+      <h2><u>Divide-and-Conquer Strong Components Algorithm:</u></h2>This algorithm aims at finding stongly connected components of a directed graph. 
+  Time complexity of this algorithm is O(ElogV+V),where V is number of vertices and E is the number of edges.
+  Though this Algorithm is not as fast Kosa Raju's oin theory but in modern computer this algorithm can prove to be faster as accomplishes the dificult task of parallelizing DFS.
+  
+  <b>Our implentation of the algorithm:</b>
+
+    1. We used Hash-Maps to store the graph, as the input sets available did not have vertices in sequence.
+    2. We made a reverse graph to the input graph, which will be used later.
+    3. We randomly select a vertex from the source vertices of input graph.
+    4. We perform DFS from the current veterx both on the input graph and its reverse.
+    5. Now for current iteration we store the visited verctices in the set SCC(strongly connected components)
+
+
+  <b>Time Complexity Analysis:</b>
+    As we randomly select the vertex for dfs the time complexity of the algorithm is O(ElogV+V).
+      <h2><u>Kosaraju algorithm:</u></h2>
+      This algorithm aims at finding stongly connected components of a directed graph. 
+      Time complexity of this algorithm is O(V+E),where V is number of vertices and E is the number of edges.
+      We find this algorithm to be very simple yet very fast given the task it has to accomplish
+      <h3>Kosaraju using maps</h3><hr>
+      <b>Our implementation of algorithm:</b>
+
+      1. Use Hash-Maps to store the graph as the input sets available did not have vertices in sequence.
+      2. DFS on the graph and storing the vertices on a stack as move through them.
+      3. Store the reverse of the given graph on rev-graph to implement main part of Kosa Raju.
+      4. DFS on the the rev-graph from the vertices on the stack. We pop the stack in each iteration.
+      5. Printing the nodes as we do DFS, identifying the strongly connected components.
+
+      <b>Time Complexity Analysis:</b>
+
+      We use DFS 2 times to find the strongly connected components.
+      As while performing DFS we visit each vertex and check each of its edge only once the Time Complexity of it is O(V+E).
+      So as a result the algorithm also has the same Time Complexity i.e. O(V+E).
+      <h3>  Kosaraju using vectors</h3><hr>
+      <!--kosaraju algorithm:
+      This algorithm aims at finding stongly connected components of a directed graph. 
+      Time complexity of this algorithm is O(V+E),where V is number of vertices and E is the number of edges.
+      We find this algorithm to be very simple yet very fast given the task it has to accomplish-->
+      <b>Our implementation of algorithm:</b>
+
+      1. Use array of vectors to store the graph .
+      2. DFS on the graph and storing the vertices on a stack as move through them.
+      3. Store the reverse of the given graph on rev-graph to implement main part of Kosa Raju.
+      4. DFS on the the rev-graph from the vertices on the stack. We pop the stack in each iteration.
+      5. Printing the nodes as we do DFS, identifying the strongly connected components.
+
+      Time Complexity Analysis:
+
+      We use DFS 2 times to find the strongly connected components.
+      As while performing DFS we visit each vertex and check each of its edge only once the Time Complexity of it is O(V+E).
+      So as a result the algorithm also has the same Time Complexity i.e. O(V+E).
+
+    </pre>
+
+  <!--All results to be put into the images folder and then referenced from here -->
+  <h1 id="Results">Results : Visualization and output for testcases</h1>
+  <a href="images/1.png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/1.png" alt="" />
+  </a>
+  <a href="images/2.png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/2.png" alt="" />
+  </a>
+  <a href="images/3.png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/3.png" alt="" />
+  </a>
+  <a href="images/4.png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/4.png" alt="" />
+  </a>
+   <!--   
+  <a href="images/Screenshot (217).png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/Screenshot (217).png" alt="" />
+  </a>
+  <a href="images/Screenshot (218).png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/Screenshot (218).png" alt="" />
+  </a>
+  <a href="images/Screenshot (219).png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/Screenshot (219).png" alt="" />
+  </a>
+  <a href="images/Screenshot (220).png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/Screenshot (220).png" alt="" />
+  </a>
+  <a href="images/Screenshot (221).png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/Screenshot (221).png" alt="" />
+  </a>
+  <a href="images/Screenshot (222).png" data-fancybox="gallery" >
+  <img class="thumbnail" src="images/Screenshot (222).png" alt="" />
+  </a>-->
+ 
+
+  <h1 id="References">References</h1>
+	<p>
+           
+	</p>
+	<div>
+		<pre>
+      https://www.geeksforgeeks.org/strongly-connected-components/
+      http://lcm.csa.iisc.ernet.in/dsa/node171.html 
+		</pre>
+	</div>
+    <div>
+        <p>
+            <a target="_blank" href="https://github.com/souryaansh/DAA_A1">See full code</a>
+        </p>
+    </div>
+</div>
+
+
+
+</body>
+</html>
