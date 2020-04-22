@@ -1,9 +1,21 @@
+// ----------------------------------------------
+/// Finding stongly connected cmponents in a graph using Kosaraju's algorithm
+///
+/// This implentations uses C++ std vectors and requires id of nodes be less than the given number
+// ----------------------------------------------
+
+
 #include<bits/stdc++.h>
 
 using namespace std;
+
+
 vector<bool> visited;
 stack<int> strong;
+
 int current =0;
+
+
 void dfs(int vertex,vector<int> graph[]){
     visited[vertex] = true;
     for(auto i : graph[vertex]){
@@ -11,6 +23,8 @@ void dfs(int vertex,vector<int> graph[]){
     }
     strong.push(vertex);
 }
+
+
 void revdfs(int vertex,vector<int> graph[]){
     visited[vertex] = true;
     cout<<vertex<<" ";
@@ -20,6 +34,7 @@ void revdfs(int vertex,vector<int> graph[]){
     }
     strong.push(vertex);
 }
+
 
 int main(){
     int v,e;
